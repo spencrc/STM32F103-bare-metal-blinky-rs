@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 
+use startup as _;
 use stm32f1::stm32f103::Peripherals;
 
 #[inline(never)]

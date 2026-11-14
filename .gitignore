@@ -1,4 +1,4 @@
-/target
-/.cache
+target
+.cache
 compile_commands.json
 *.bin

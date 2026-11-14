@@ -1,0 +1,17 @@
+[package]
+name = "blinky"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "blinky"
+test = false
+bench = false
+
+[dependencies]
+cortex-m = { version = "0.7", features = ["critical-section-single-core"] }
+stm32f1 = { version = "0.16.0", default-features = false, features = [
+    "stm32f103",
+    "critical-section",
+] }
+startup = { path = "../startup" }
