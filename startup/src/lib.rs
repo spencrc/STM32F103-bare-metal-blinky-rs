@@ -119,6 +119,7 @@ unsafe extern "C" {
 #[unsafe(no_mangle)]
 pub static __RESET: unsafe extern "C" fn() -> ! = Reset;
 
+#[rustfmt::skip]
 #[unsafe(link_section = ".vector_table.vectors")]
 #[unsafe(no_mangle)]
 pub static __VECTORS: [Vector; 74] = [
@@ -126,17 +127,13 @@ pub static __VECTORS: [Vector; 74] = [
     Vector { handler: HardFault },
     Vector { handler: MemManage },
     Vector { handler: BusFault },
-    Vector {
-        handler: UsageFault,
-    },
+    Vector { handler: UsageFault, },
     Vector { reserved: 0 },
     Vector { reserved: 0 },
     Vector { reserved: 0 },
     Vector { reserved: 0 },
     Vector { handler: SVCall },
-    Vector {
-        handler: DebugMonitor,
-    },
+    Vector { handler: DebugMonitor, },
     Vector { reserved: 0 },
     Vector { handler: PendSV },
     Vector { handler: SysTick },
@@ -151,42 +148,22 @@ pub static __VECTORS: [Vector; 74] = [
     Vector { handler: EXTI2 },
     Vector { handler: EXTI3 },
     Vector { handler: EXTI4 },
-    Vector {
-        handler: DMA1_Channel1,
-    },
-    Vector {
-        handler: DMA1_Channel2,
-    },
-    Vector {
-        handler: DMA1_Channel3,
-    },
-    Vector {
-        handler: DMA1_Channel4,
-    },
-    Vector {
-        handler: DMA1_Channel5,
-    },
-    Vector {
-        handler: DMA1_Channel6,
-    },
-    Vector {
-        handler: DMA1_Channel7,
-    },
+    Vector { handler: DMA1_Channel1, },
+    Vector { handler: DMA1_Channel2, },
+    Vector { handler: DMA1_Channel3, },
+    Vector { handler: DMA1_Channel4, },
+    Vector { handler: DMA1_Channel5, },
+    Vector { handler: DMA1_Channel6, },
+    Vector { handler: DMA1_Channel7, },
     Vector { handler: ADC1_2 },
-    Vector {
-        handler: USB_HP_CAN_TX,
-    },
-    Vector {
-        handler: USB_LP_CAN_RX0,
-    },
+    Vector { handler: USB_HP_CAN_TX, },
+    Vector { handler: USB_LP_CAN_RX0, },
     Vector { handler: CAN_RX1 },
     Vector { handler: CAN_SCE },
     Vector { handler: EXTI9_5 },
     Vector { handler: TIM1_BRK },
     Vector { handler: TIM1_UP },
-    Vector {
-        handler: TIM1_TRG_COM,
-    },
+    Vector { handler: TIM1_TRG_COM, },
     Vector { handler: TIM1_CC },
     Vector { handler: TIM2 },
     Vector { handler: TIM3 },
@@ -205,9 +182,7 @@ pub static __VECTORS: [Vector; 74] = [
     Vector { handler: USBWakeup },
     Vector { handler: TIM8_BRK },
     Vector { handler: TIM8_UP },
-    Vector {
-        handler: TIM8_TRG_COM,
-    },
+    Vector { handler: TIM8_TRG_COM, },
     Vector { handler: TIM8_CC },
     Vector { handler: ADC3 },
     Vector { handler: FSMC },
@@ -218,16 +193,8 @@ pub static __VECTORS: [Vector; 74] = [
     Vector { handler: UART5 },
     Vector { handler: TIM6 },
     Vector { handler: TIM7 },
-    Vector {
-        handler: DMA2_Channel1,
-    },
-    Vector {
-        handler: DMA2_Channel2,
-    },
-    Vector {
-        handler: DMA2_Channel3,
-    },
-    Vector {
-        handler: DMA2_Channel4_5,
-    },
+    Vector { handler: DMA2_Channel1, },
+    Vector { handler: DMA2_Channel2, },
+    Vector { handler: DMA2_Channel3, },
+    Vector { handler: DMA2_Channel4_5, },
 ];
